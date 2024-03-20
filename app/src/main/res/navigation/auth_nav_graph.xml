@@ -18,7 +18,7 @@
         android:id="@+id/singinFragment"
         android:name="com.zoro.blinkitclone.SinginFragment"
         android:label="fragment_singin"
-        tools:layout="@layout/fragment_singin" >
+        tools:layout="@layout/fragment_singin">
         <action
             android:id="@+id/action_singinFragment_to_OTPFragment"
             app:destination="@id/OTPFragment" />
