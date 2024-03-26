@@ -7,25 +7,36 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.zoro.blinkitclone.SplashFragment"
+        android:name="com.zoro.blinkitclone.auth.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_singinFragment5"
-            app:destination="@id/singinFragment" />
+            app:destination="@id/singinFragment"
+            app:enterAnim="@anim/from_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/singinFragment"
-        android:name="com.zoro.blinkitclone.SinginFragment"
+        android:name="com.zoro.blinkitclone.auth.SinginFragment"
         android:label="fragment_singin"
         tools:layout="@layout/fragment_singin">
         <action
             android:id="@+id/action_singinFragment_to_OTPFragment"
+            app:enterAnim="@anim/from_right"
             app:destination="@id/OTPFragment" />
     </fragment>
     <fragment
         android:id="@+id/OTPFragment"
-        android:name="com.zoro.blinkitclone.OTPFragment"
+        android:name="com.zoro.blinkitclone.auth.OTPFragment"
         android:label="fragment_o_t_p"
-        tools:layout="@layout/fragment_o_t_p" />
+        tools:layout="@layout/fragment_o_t_p" >
+        <action
+            android:id="@+id/action_OTPFragment_to_singinFragment2"
+            app:destination="@id/singinFragment"
+            app:popUpTo="@id/singinFragment"
+            app:enterAnim="@anim/from_left"
+            app:popUpToInclusive="true"/>
+    </fragment>
 </navigation>
