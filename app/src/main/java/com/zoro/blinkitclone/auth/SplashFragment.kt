@@ -30,7 +30,6 @@ class SplashFragment : Fragment() {
     }
 
     private fun setStatusBarColor() {
-
         activity?.window?.apply {
             val statusBarColors = ContextCompat.getColor(requireContext(), R.color.yellow)
             statusBarColor = statusBarColors
